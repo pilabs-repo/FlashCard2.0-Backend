@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reminder to revise decks on your Flash Card App</title>
+    </head>
+    <body>
+        Dear {{data['username']}},<br>
+        This is to inform you that following decks are not revised in the past 24 hours<br>
+        Please revise them at the earliest:
+        <ul>
+            {%for d in data['decks']  -%}
+            <li>{{d}}</li>
+            {% endfor %}
+        </ul>
+        Click <a href="http://10.1.1.42:8081">here</a> to go to app page<br>
+        Regards,<br>
+        <br>Your App
+    </body>
+</html>
